@@ -1,0 +1,27 @@
+CREATE TABLE users (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	full_name varchar(200)  NOT NULL,
+	email varchar(50)  NOT NULL,
+	password varchar(200)  NOT NULL,
+	created datetime NOT NULL,
+	modified datetime NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE hobby (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	user_id int(11) NOT NUll,
+	name varchar(200)  NOT NULL,
+	created datetime NOT NULL,
+	modified datetime NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE sub_hobby (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	hobby_id int(11) NOT NUll,
+	name varchar(200)  NOT NULL,
+	created datetime NOT NULL,
+	modified datetime NOT NULL,
+	PRIMARY KEY (id)
+);
