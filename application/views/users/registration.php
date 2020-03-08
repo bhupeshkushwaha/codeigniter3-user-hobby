@@ -13,7 +13,7 @@
             } 
         ?>
 
-        <form action="" method="post">
+        <form id="userRegisterForm" action="" method="post">
 
             <input 
                 type="text" 
@@ -24,8 +24,8 @@
                 value="<?php echo !empty($user['full_name']) ? $user['full_name'] : ''; ?>" 
                 required 
             />
-            <span class="error-block"></span>
-            <?php echo form_error('full_name','<p class="help-block">','</p>'); ?>
+            <span class="error-block text-danger"></span>
+            <?php echo form_error('full_name','<p class="help-block text-danger">','</p>'); ?>
 
             <input 
                 type="email" 
@@ -36,8 +36,8 @@
                 value="<?php echo !empty($user['email']) ? $user['email'] : ''; ?>" 
                 required 
             />
-            <span class="error-block"></span>
-            <?php echo form_error('email','<p class="help-block">','</p>'); ?>
+            <span class="error-block text-danger"></span>
+            <?php echo form_error('email','<p class="help-block text-danger">','</p>'); ?>
 
             <input 
                 type="password" 
@@ -47,8 +47,8 @@
                 placeholder="Enter your password" 
                 required
             />
-            <span class="error-block"></span>
-            <?php echo form_error('password','<p class="help-block">','</p>'); ?>
+            <span class="error-block text-danger"></span>
+            <?php echo form_error('password','<p class="help-block text-danger">','</p>'); ?>
 
             <input 
                 type="password" 
@@ -58,8 +58,8 @@
                 placeholder="Enter your confirm passsword" 
                 required 
             />
-            <span class="error-block"></span>
-            <?php echo form_error('conf_password','<p class="help-block">','</p>'); ?>
+            <span class="error-block text-danger"></span>
+            <?php echo form_error('conf_password','<p class="help-block text-danger">','</p>'); ?>
 
             <input 
                 type="submit" 

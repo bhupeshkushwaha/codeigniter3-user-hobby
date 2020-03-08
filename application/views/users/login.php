@@ -13,14 +13,14 @@
             } 
         ?>
 
-        <form action="" method="post">
+        <form id="userLoginForm" action="" method="post">
             <input type="text" id="email" class="fadeIn second" name="email" placeholder="Enter your mail id" />
             <?php echo form_error('email','<p class="help-block">','</p>'); ?>
 
             <input type="text" id="password" class="fadeIn third" name="password" placeholder="Enter your password" />
             <?php echo form_error('password','<p class="help-block">','</p>'); ?>
 
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input type="submit" id="loginSubmit" name="loginSubmit" class="fadeIn fourth" value="Log In">
         </form>
 
         <div id="formFooter">
