@@ -1,30 +1,31 @@
-<div class="container">
-    <h2>Login to Your Users Hobby</h2>
-	
-    <!-- Status message -->
-    <?php  
-        if(!empty($success_msg)){ 
-            echo '<p class="status-msg success">'.$success_msg.'</p>'; 
-        }elseif(!empty($error_msg)){ 
-            echo '<p class="status-msg error">'.$error_msg.'</p>'; 
-        } 
-    ?>
-	
-    <!-- Login form -->
-    <div class="regisFrm">
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <div class="fadeIn first">
+          <h1 class="mt-5 mb-2">User Hobbies</h1>
+        </div>
+
+        <?php  
+            if(!empty($success_msg)){ 
+                echo '<p class="status-msg success">'.$success_msg.'</p>'; 
+            }elseif(!empty($error_msg)){ 
+                echo '<p class="status-msg error">'.$error_msg.'</p>'; 
+            } 
+        ?>
+
         <form action="" method="post">
-            <div class="form-group">
-                <input type="email" name="email" placeholder="EMAIL" required="">
-                <?php echo form_error('email','<p class="help-block">','</p>'); ?>
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" placeholder="PASSWORD" required="">
-                <?php echo form_error('password','<p class="help-block">','</p>'); ?>
-            </div>
-            <div class="send-button">
-                <input type="submit" name="loginSubmit" value="LOGIN">
-            </div>
+            <input type="text" id="email" class="fadeIn second" name="email" placeholder="Enter your mail id" />
+            <?php echo form_error('email','<p class="help-block">','</p>'); ?>
+
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="Enter your password" />
+            <?php echo form_error('password','<p class="help-block">','</p>'); ?>
+
+            <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
-        <p>Don't have an user? <a href="<?php echo base_url('users/registration'); ?>">Register</a></p>
+
+        <div id="formFooter">
+          Don't have an user? <a href="<?php echo base_url('users/registration'); ?>">Register</a>
+        </div>
+
     </div>
 </div>
